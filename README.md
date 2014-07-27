@@ -20,9 +20,21 @@ the page, identified by class or id:
   var rembr = new Rembrandt("#example");
 
   // Functions are called as follows:
-  rembr.backgroundFill("#0b0b0c"); // (fill element example with #0b0b0c);
+  rembr.fill("#0b0b0c"); // (fill element example with #0b0b0c);
 </script>
 ```
+
+# Features
+
+Here's all of the functions in rembrandt.js so far, with a short explanation:
+
+* `rembrandt.fill(color)` - Fills the focus element with any valid CSS color.
+* `rembrandt.stroke(color, [width])` - Changes the border color of the focus element, and the width (optionally).
+* `rembrandt.focus(element)` - Sets the focus element for the rembrandt.js object.
+* `rembrandt.size(width, height)` - Change the width and height of the focus element accordingly.
+* `rembrandt.opacity(opacity)` - Set the opacity to a number, like with CSS, or a string: "transparent", "translucent", or "opaque".
+* `rembrandt.move(x, y)` - Puts the focus element in position [x, y] on the page.
+* `rembrandt.shape(shape)` - Change the shape of the element with a string. Currently supported: "square", "circle", "ellipse".
 
 # Feedback
 
