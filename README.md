@@ -1,6 +1,3 @@
-rembrandt.js
-============
-
 <img src="https://raw.githubusercontent.com/joshhartigan/rembrandt.js/master/rembrandt.png">
 
 Unoriginal, but super-simple, drawing for JavaScript.
