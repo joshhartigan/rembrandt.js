@@ -1,7 +1,5 @@
 <img src="https://raw.githubusercontent.com/joshhartigan/rembrandt.js/master/rembrandt.png">
 
-Unoriginal, but super-simple, drawing for JavaScript.
-
 # Usage
 
 Include both rembrandt.js and jQuery in your html file:
