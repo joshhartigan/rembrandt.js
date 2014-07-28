@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/joshhartigan/rembrandt.js/master/rembrandt.png">
+# rembrandt.js
 
 # Usage
 
