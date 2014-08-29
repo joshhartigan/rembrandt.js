@@ -1,8 +1,10 @@
 function Rembrandt(element) {
-  if (element[0] === "#") {
+  if (element != undefined && element[0] === "#") {
     this.element = document.getElementById(element.replace("#", ""));
-  } else if (element[0] == ".") {
+  } else if (element != undefined && element[0] == ".") {
     this.element = document.getElementByClass(element.replace(".", ""));
+  } else if (element == undefined) {
+    this.element = document.body;
   }
 }
 
