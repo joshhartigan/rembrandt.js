@@ -46,10 +46,48 @@ Rembrandt.prototype.shape = function(shape) {
     this.element.style.height = this.element.style.width;
     this.element.style.borderRadius = "50%";
   } else if (shape === "ellipse") {
-    this.element.styke.borderRadius = "50%";
+    this.element.style.borderRadius = "50%";
   } else if (shape === "square") {
     this.element.style.height = this.element.style.width;
-    this.element.styke.borderRadius = 0;
+    this.element.style.borderRadius = 0;
   }
 };
 
+Rembrandt.prototype.graph = function(set, width, unit, label) {
+  this.element.style.width = width;
+  this.element.style.height = Math.max.apply(Math, set) * unit;
+
+  for (var i = 0; i < set.length; i++) {
+    var bar = document.createElement("div");
+    bar.id = this.element.id + "Bar" + String(i);
+    // Random PrettyJS Color
+    bar.style.backgroundColor = this.pastelColor();
+    // Sizing according to data-point size
+    bar.style.width = width / set.length;
+    bar.style.height = set[i] * unit;
+    // Arrange bars next to each other horizontally
+    this.element.style.whiteSpace = "nowrap";
+    bar.style.display = "inline-block";
+    // Label bars with values if 'label' parameter given
+    if (label !== undefined) {
+      bar.style.display += "table-cell";
+      bar.style.verticalAlign = "bottom";
+      bar.style.textAlign = "center";
+      bar.innerText = set[i];
+    }
+    // Add to Rembrandt focus
+    this.element.appendChild(bar);
+  }
+};
+
+/**
+ * Utility Methods
+ * (i.e methods that don't draw or change the appearance
+ *  of anything)
+ */
+Rembrandt.prototype.pastelColor = function() {
+    var r = (Math.round(Math.random() * 127) + 127).toString(16);
+    var g = (Math.round(Math.random() * 127) + 127).toString(16);
+    var b = (Math.round(Math.random() * 127) + 127).toString(16);
+    return '#' + r + g + b;
+};
