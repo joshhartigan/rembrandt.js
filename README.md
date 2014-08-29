@@ -1,5 +1,3 @@
-# rembrandt.js
-
 # Usage
 
 Include rembrandt.js in your html file:

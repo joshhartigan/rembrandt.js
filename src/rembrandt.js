@@ -1,6 +1,5 @@
-// Class
 function Rembrandt(element) {
-  if (element[0] == "#") {
+  if (element[0] === "#") {
     this.element = document.getElementById(element.replace("#", ""));
   } else if (element[0] == ".") {
     this.element = document.getElementByClass(element.replace(".", ""));
@@ -19,18 +18,17 @@ Rembrandt.prototype.stroke = function(color, width) {
   this.element.style.borderWidth = width;
 };
 
-
 Rembrandt.prototype.size = function(width, height) {
   this.element.style.width = width;
   this.element.style.height = height;
 };
 
 Rembrandt.prototype.opacity = function(opacity) {
-  if (opacity == "transparent") {
+  if (opacity === "transparent") {
     this.element.style.opacity = 0;
-  } else if (opacity == "translucent") {
+  } else if (opacity === "translucent") {
     this.element.style.opacity = 0.5;
-  } else if (opacity == "opaque") {
+  } else if (opacity === "opaque") {
     this.element.style.opacity = 0.8;
   } else {
     this.element.style.opacity = opacity;
@@ -44,12 +42,12 @@ Rembrandt.prototype.move = function(xPos, yPos) {
 };
 
 Rembrandt.prototype.shape = function(shape) {
-  if (shape == "circle") {
+  if (shape === "circle") {
     this.element.style.height = this.element.style.width;
     this.element.style.borderRadius = "50%";
-  } else if (shape == "ellipse") {
+  } else if (shape === "ellipse") {
     this.element.styke.borderRadius = "50%";
-  } else if (shape == "square") {
+  } else if (shape === "square") {
     this.element.style.height = this.element.style.width;
     this.element.styke.borderRadius = 0;
   }
