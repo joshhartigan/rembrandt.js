@@ -2,10 +2,9 @@
 
 # Usage
 
-Include both rembrandt.js and jQuery in your html file:
+Include rembrandt.js in your html file:
 
 ```html
-<script src="js/jquery.min.js"></script>
 <script src="js/rembrandt.js"></script>
 ```
 

@@ -1,55 +1,57 @@
 // Class
 function Rembrandt(element) {
- this.element = element;
+  if (element[0] == "#") {
+    this.element = document.getElementById(element.replace("#", ""));
+  } else if (element[0] == ".") {
+    this.element = document.getElementByClass(element.replace(".", ""));
+  }
 }
 
 /**
  * Main methods
  */
 Rembrandt.prototype.fill = function(color) {
-  $(this.element).css("background-color", color);
+  this.element.style.backgroundColor = color;
 };
 
 Rembrandt.prototype.stroke = function(color, width) {
-  $(this.element).css("border-color", color);
-  $(this.element).css("border-width", width);
+  this.element.style.borderColor = color;
+  this.element.style.borderWidth = width;
 };
 
-Rembrandt.prototype.focus = function(element) {
-  this.element = element;
-};
 
 Rembrandt.prototype.size = function(width, height) {
-  $(this.element).css("width", width + "px");
-  $(this.element).css("height", height + "px");
+  this.element.style.width = width;
+  this.element.style.height = height;
 };
 
 Rembrandt.prototype.opacity = function(opacity) {
   if (opacity == "transparent") {
-    $(this.element).css("opacity", "0");
+    this.element.style.opacity = 0;
   } else if (opacity == "translucent") {
-    $(this.element).css("opacity", "0.5");
+    this.element.style.opacity = 0.5;
   } else if (opacity == "opaque") {
-    $(this.element).css("opacity", "0.8");
+    this.element.style.opacity = 0.8;
   } else {
-    $(this.element).css("opacity", opacity);
+    this.element.style.opacity = opacity;
   }
 };
 
 Rembrandt.prototype.move = function(xPos, yPos) {
-  $(this.element).css("position", "absolute");
-  $(this.element).css("left", xPos + "px");
-  $(this.element).css("top", yPos + "px");
+  this.element.style.position = "absolute";
+  this.element.style.left = xPos;
+  this.element.style.top = xPos;
 };
 
 Rembrandt.prototype.shape = function(shape) {
   if (shape == "circle") {
-    $(this.element).css("height", $(this.element).width());
-    $(this.element).css("border-radius", "50%");
+    this.element.style.height = this.element.style.width;
+    this.element.style.borderRadius = "50%";
   } else if (shape == "ellipse") {
-    $(this.element).css("border-radius", "50%");
+    this.element.styke.borderRadius = "50%";
   } else if (shape == "square") {
-    $(this.element).css("height", $(this.element).width());
-    $(this.element).css("border-radius", "0%");
+    this.element.style.height = this.element.style.width;
+    this.element.styke.borderRadius = 0;
   }
 };
+
