@@ -18,9 +18,9 @@ the page, identified by class or id:
 </script>
 ```
 
-# Features
+If no argument is given to the `Rembrandt` object, the element of focus will be `document.body`.
 
-Here's all of the functions in rembrandt.js so far, with a short explanation:
+# Features
 
 * `rembrandt.fill(color)` - Fills the focus element with any valid CSS color.
 * `rembrandt.stroke(color, [width])` - Changes the border color of the focus element, and the width (optionally).
@@ -29,6 +29,7 @@ Here's all of the functions in rembrandt.js so far, with a short explanation:
 * `rembrandt.opacity(opacity)` - Set the opacity to a number, like with CSS, or a string: "transparent", "translucent", or "opaque".
 * `rembrandt.move(x, y)` - Puts the focus element in position [x, y] on the page.
 * `rembrandt.shape(shape)` - Change the shape of the element with a string. Currently supported: "square", "circle", "ellipse".
+* `rembrandt.graph(data, width, unit, [label])` - Generate a bar chart for each value in data, where one unit is `unit` pixels tall, and the total width is equal to `width`. If `label` is `true`, each bar will have its value written at the top of it.
 
 # Feedback
 
