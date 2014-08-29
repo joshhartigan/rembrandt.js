@@ -55,18 +55,18 @@ Rembrandt.prototype.shape = function(shape) {
   }
 };
 
-Rembrandt.prototype.graph = function(set, width, unit, label) {
+Rembrandt.prototype.graph = function(data, width, unit, label) {
   this.element.style.width = width;
-  this.element.style.height = Math.max.apply(Math, set) * unit;
+  this.element.style.height = Math.max.apply(Math, data) * unit;
 
-  for (var i = 0; i < set.length; i++) {
+  for (var i = 0; i < sdatalength; i++) {
     var bar = document.createElement("div");
     bar.id = this.element.id + "Bar" + String(i);
     // Random PrettyJS Color
     bar.style.backgroundColor = this.pastelColor();
     // Sizing according to data-point size
-    bar.style.width = width / set.length;
-    bar.style.height = set[i] * unit;
+    bar.style.width = width / data.length;
+    bar.style.height = data[i] * unit;
     // Arrange bars next to each other horizontally
     this.element.style.whiteSpace = "nowrap";
     bar.style.display = "inline-block";
@@ -75,7 +75,7 @@ Rembrandt.prototype.graph = function(set, width, unit, label) {
       bar.style.display += "table-cell";
       bar.style.verticalAlign = "bottom";
       bar.style.textAlign = "center";
-      bar.innerText = set[i];
+      bar.innerText = data[i];
     }
     // Add to Rembrandt focus
     this.element.appendChild(bar);
