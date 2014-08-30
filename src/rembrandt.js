@@ -59,7 +59,7 @@ Rembrandt.prototype.graph = function(data, width, unit, label) {
   this.element.style.width = width;
   this.element.style.height = Math.max.apply(Math, data) * unit;
 
-  for (var i = 0; i < sdatalength; i++) {
+  for (var i = 0; i < data.length; i++) {
     var bar = document.createElement("div");
     bar.id = this.element.id + "Bar" + String(i);
     // Random PrettyJS Color
