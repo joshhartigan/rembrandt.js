@@ -1,0 +1,23 @@
+body {
+  background: #eee;
+}
+
+h2, h4 {
+  font-family: sans-serif;
+}
+
+pre {
+  font-family: Menlo, monospace;
+  font-size: 14pt;
+}
+
+input {
+  font-family: Menlo, monospace;
+  font-size: 16pt;
+}
+
+#remb-elem {
+  width: 200px;
+  height: 200px;
+  background: orangered;
+}

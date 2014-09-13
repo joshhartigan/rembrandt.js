@@ -40,7 +40,7 @@ Rembrandt.prototype.opacity = function(opacity) {
 Rembrandt.prototype.move = function(xPos, yPos) {
   this.element.style.position = "absolute";
   this.element.style.left = xPos;
-  this.element.style.top = xPos;
+  this.element.style.top = yPos;
 };
 
 Rembrandt.prototype.shape = function(shape) {
@@ -85,7 +85,7 @@ Rembrandt.prototype.graph = function(data, width, unit, label) {
 /**
  * Utility Methods
  * (i.e methods that don't draw or change the appearance
- *  of anything)
+ *  of anything on the page)
  */
 Rembrandt.prototype.pastelColor = function() {
     var r = (Math.round(Math.random() * 127) + 127).toString(16);

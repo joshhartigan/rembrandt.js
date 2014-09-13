@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="rembrandt.js">
+    <meta name="author" content="Josh Hartigan">
+    <title>&middot; rembrandt.js &middot;</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="src/rembrandt.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>Input rembrandt code:</h2>
+    <h4>Examples:</h4>
+    <pre>
+    R.fill(color);
+    R.size(width, height);
+    R.stroke(color);
+    </pre>
+    <input type="text" id="remb-in"></input>
+
+    <h2>See results:</h2>
+    <div id="remb-elem"></div>
+
+    <script>
+      var R = new Rembrandt("#remb-elem");
+      $("#remb-in").change(function() {
+        eval($("#remb-in").val());
+      });
+    </script>
+  </body>
+</html>
