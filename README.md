@@ -24,7 +24,6 @@ If no argument is given to the `Rembrandt` object, the element of focus will be 
 
 * `rembrandt.fill(color)` - Fills the focus element with any valid CSS color.
 * `rembrandt.stroke(color, [width])` - Changes the border color of the focus element, and the width (optionally).
-* `rembrandt.focus(element)` - Sets the focus element for the rembrandt.js object.
 * `rembrandt.size(width, height)` - Change the width and height of the focus element accordingly.
 * `rembrandt.opacity(opacity)` - Set the opacity to a number, like with CSS, or a string: "transparent", "translucent", or "opaque".
 * `rembrandt.move(x, y)` - Puts the focus element in position [x, y] on the page.
